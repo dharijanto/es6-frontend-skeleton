@@ -2,9 +2,18 @@
   "name": "browserify-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
+  "browserify-shim": {
+    "jquery": "global:$"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node run",
+    "buildtoo": "browserify -d -g . > bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,15 +23,7 @@
     "browserify": "^14.4.0",
     "browserify-shim": "^3.8.14",
     "lodash": "^4.17.4",
+    "uniq": "^1.0.1",
     "watchify": "^3.9.0"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "jquery": "$",
-    "dani-lib": "dani"
   }
 }
