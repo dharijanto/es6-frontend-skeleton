@@ -12,9 +12,9 @@
     ]
   },
   "scripts": {
-    "start": "nodemon run.js",
+    "start": "node watch",
     "build": "node run",
-    "buildtoo": "browserify -d -g . > bundle.js"
+    "buildManually": "browserify -d -g . > bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "browserify": "^14.4.0",
     "browserify-shim": "^3.8.14",
     "lodash": "^4.17.4",
+    "uglifyify": "^4.0.4",
     "uniq": "^1.0.1",
     "watchify": "^3.9.0"
   }

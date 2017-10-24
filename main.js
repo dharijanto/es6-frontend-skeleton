@@ -1,4 +1,3 @@
-var dt = require('datatables.net')
 var $ = require('jquery')
 var unique = require('uniq')
 
